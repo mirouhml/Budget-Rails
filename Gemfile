@@ -70,6 +70,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
   gem 'rspec-rails'
+  gem 'ffi'
 end
 
 gem 'tailwindcss-rails', '~> 2.0'
