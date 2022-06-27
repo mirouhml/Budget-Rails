@@ -11,11 +11,19 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <div class="flash">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-      </div>
+    <main class="container mx-auto mt-10 px-5 flex flex-col">
+      <% if alert || notice %>
+        <div class="flash flex w-full justify-center mb-12">
+          <div class="p-2 bg-indigo-500 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+            <% if alert %>
+              <span class="font-semibold mx-3 text-left flex-auto text-white"><%= alert %></span>
+            <% end %>
+            <% if notice %>
+              <span class="font-semibold mx-3 text-left flex-auto text-white"><%= notice %></span>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
       <%= yield %>
     </main>
   </body>

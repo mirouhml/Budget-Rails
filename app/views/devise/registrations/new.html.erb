@@ -1,0 +1,29 @@
+<section class="flex flex-col items-center w-full">
+  <h2 class="text-2xl font-bold">Sign up</h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field my-2">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Name", class: "w-full" %>
+    </div>
+
+    <div class="field my-2">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "w-full" %>
+    </div>
+
+    <div class="field my-2">
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "w-full" %>
+    </div>
+
+    <div class="field my-2">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm password", class: "w-full" %>
+    </div>
+
+    <div class="actions flex justify-center">
+      <%= f.submit "Sign up", class: "cursor-pointer bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-2" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</section>
