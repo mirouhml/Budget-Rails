@@ -5,7 +5,7 @@ describe PaymentCategory, type: :model do
     user = User.create(name: 'John Doe', email: 'john@something.com', password: '123456', confirmed_at: Time.now)
     category = Category.create(name: 'Category 1', icon: 'Icon 1', author: user)
     payment = Payment.create(name: 'Payment 1', amount: 40, author: user)
-    PaymentCategory.new(payment: payment, category: category)
+    PaymentCategory.new(payment:, category:)
   end
 
   before { subject.save }
