@@ -1,1 +1,16 @@
-<h1>Hello world</h1>
+<section class="bg-main-500 h-screen w-screen flex flex-col items-center justify-center">
+  <h1 class="font-pacifico text-white text-5xl">Budget Rails</h1>
+  <div class="flex flex-col sm:flex-row fixed w-full mx-auto top-3/4">
+      <%= link_to "Log in",
+        new_user_session_path,
+        method: :get,
+        class: "cursor-pointer bg-white hover:bg-main-900 hover:text-white text-main-500 font-bold py-2 px-4 rounded my-2 w-80 sm:w-70 text-center mx-auto" 
+      %>
+
+      <%= link_to "Sign up",
+        new_user_registration_path,
+        method: :get,
+        class: "cursor-pointer bg-white hover:bg-main-900 hover:text-white text-main-500 font-bold py-2 px-4 rounded my-2 w-80 text-center mx-auto" 
+      %>
+  </div>
+</section>
