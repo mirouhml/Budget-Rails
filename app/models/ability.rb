@@ -4,9 +4,8 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    return unless user.present?
 
-      return unless user.present?
-
-      can :manage, :all, author: user
+    can :manage, [Payment, Category], user_id: user.id
   end
 end

@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  load_and_authorize_resource
   protect_from_forgery with: :exception
 
   before_action :update_allowed_parameters, if: :devise_controller?
