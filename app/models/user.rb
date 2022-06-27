@@ -6,4 +6,6 @@ class User < ApplicationRecord
          :confirmable
   has_many :payments
   has_many :categories
+
+  validates :name, presence: true
 end
