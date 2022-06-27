@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'categories/index'
+  get 'categories/show'
+  get 'categories/new'
+  get 'payments/index'
+  get 'payments/show'
+  get 'payments/new'
   devise_for :users
   get 'users/index'
   get 'users/show'
