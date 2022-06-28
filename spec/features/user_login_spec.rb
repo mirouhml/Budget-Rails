@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'User Login', type: :feature do
-  
   before(:each) do
     User.create(name: 'John', email: 'john@example.com', password: 'password', confirmed_at: Time.now)
   end

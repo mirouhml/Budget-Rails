@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Categories", type: :feature do
-  
+RSpec.describe 'Categories', type: :feature do
   before(:each) do
     User.create(name: 'John', email: 'john@example.com', password: 'password', confirmed_at: Time.now)
     visit root_path
