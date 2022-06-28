@@ -14,7 +14,6 @@ module.exports = {
         pacifico: ['Pacifico', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        white: '#fff',
         main: {
           100: '#3778c2',
           200: '#3975C8',
@@ -31,6 +30,7 @@ module.exports = {
         'text-2': '#555d67',
         'text-3': '#878a8f',
         'text-4': '#90959b',
+        background: 'f1f3f2',
       },
     },
   },

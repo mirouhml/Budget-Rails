@@ -1,4 +1,20 @@
-<div>
-  <h1 class="font-bold text-4xl">Categories#index</h1>
-  <p>Find me in app/views/categories/index.html.erb</p>
-</div>
+<section class="h-full flex flex-col">
+  <%= render "shared/nav_bar", locals: {middle: 'CATEGORIES', left: 'back'} %>
+  <%= render "shared/flash" %>
+  <div class="h-full flex flex-col bg-background">
+    <% @categories.each do |category| %>
+      <div class="grid grid-cols-[1fr_3fr] m-3 bg-white rounded-lg border border-gray-200 shadow-md 
+      hover:bg-gray-100">
+        <img class="object-cover w-full h-full p-1 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="https://assets.materialup.com/uploads/38ef8e3b-49fb-4685-a19f-35515c16972e/preview.png" alt="">
+        <a href="#" class="p-4">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900"><%= category.name %></h5>
+          <h5 class="mb-2 text-lg font-bold tracking-tight text-text-2"><%= category.number_of_transactions %></h5>
+          <p class="font-normal text-gray-700 dark:text-gray-400"><%= category.author.name %></p>
+        </a>
+      </div>
+    <% end %>
+  </div>
+  <div class="flex bg-second justify-center">
+    <%= link_to "Add category", new_category_path, method: :get, class: "w-full text-center border p-3 m-3 rounded-md text-white" %>
+  </div>
+</section>

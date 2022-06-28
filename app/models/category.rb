@@ -4,4 +4,14 @@ class Category < ApplicationRecord
   has_many :payments, through: :payment_categories
 
   validates :name, presence: true
+
+  def number_of_transactions
+    if payments.count == 0
+      'No transactions'
+    elsif payments.count == 1
+      '1 transaction'
+    else
+      "#{payments.count} transactions"
+    end
+  end
 end
