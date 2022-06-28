@@ -17,7 +17,7 @@ class PaymentsController < ApplicationController
         redirect_back fallback_location: root_path
       else
         params[:payment][:category_ids].each do |category_id|
-          PaymentCategory.create(payment: @payment, category_id: category_id)
+          PaymentCategory.create(payment: @payment, category_id:)
         end
         redirect_to category_path(category)
       end

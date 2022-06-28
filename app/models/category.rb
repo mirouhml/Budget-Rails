@@ -6,9 +6,10 @@ class Category < ApplicationRecord
   validates :name, presence: true
 
   def number_of_transactions
-    if payments.count == 0
+    case payments.count
+    when 0
       'No transactions'
-    elsif payments.count == 1
+    when 1
       '1 transaction'
     else
       "#{payments.count} transactions"
