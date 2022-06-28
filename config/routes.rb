@@ -7,9 +7,8 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:index]
-  resources :payments, only: [:index, :show, :create, :destroy]
-  get '/categories/new' => 'categories#news', as: :new_category
-  resources :categories, only: [:index, :show, :create, :destroy]
+  resources :payments, only: [:index, :show, :new, :create, :destroy]
+  resources :categories, only: [:index, :show, :new, :create, :destroy]
 
   root "categories#index"
 end
