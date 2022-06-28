@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:index]
-  resources :payments, only: [:index, :show, :new, :create, :destroy]
-  resources :categories, only: [:index, :show, :new, :create, :destroy]
+  resources :categories, only: [:index, :show, :new, :create]
+  resources :payments, only: [:new, :create]
 
   root "categories#index"
 end

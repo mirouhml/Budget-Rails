@@ -1,4 +1,4 @@
-<div class="grid grid-cols-[1fr_3fr_1fr] w-full h-14 items-center bg-main-800">
+<div class="grid grid-cols-[1fr_3fr_1fr] w-full h-14 items-center bg-main-800 fixed top-0 z-10">
   <% if locals[:left] == 'back' %>
     <%= link_to locals[:path], class: 'flex h-10 ml-2 w-fit' do %>
       <svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" fill="white">
@@ -55,4 +55,10 @@
     </div>
   <% end %>
   <p class="text-center text-white text-bold"><%= locals[:middle] %></p>
+  <% if locals[:right] == 'LOGOUT' %>
+  <div class='text-white text-bold text-right pr-4'>
+    <%= button_to 'LOGOUT', destroy_user_session_path, method: :delete %>
+  </div>
+    
+  <% end %>
 </div>

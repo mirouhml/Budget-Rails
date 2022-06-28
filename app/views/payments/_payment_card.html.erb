@@ -1,0 +1,15 @@
+<div class="grid grid-cols-[1fr_3fr] m-3 bg-white rounded-lg border border-gray-200 shadow-md 
+hover:bg-gray-100">
+  <img 
+    class="object-cover w-full h-full p-1 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" 
+    src="https://assets.materialup.com/uploads/38ef8e3b-49fb-4685-a19f-35515c16972e/preview.png" 
+    alt="Category Icon"
+  >
+  <div class="p-4 flex flex-col">
+    <div class="flex grow">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 grow"><%= payment.name %></h5>
+      <h5 class="mb-2 text-lg font-bold tracking-tight text-text-2">$<%= payment.amount %></h5>
+    </div>
+    <p class="font-normal text-gray-700 dark:text-gray-400"><%= payment.author.name %></p>
+  </div>
+</div>
