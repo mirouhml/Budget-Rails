@@ -10,7 +10,7 @@
       <div class="text-center text-2xl text-gray-600">No transactions yet</div>
     <% else %>
       <% @payments.each do |payment| %>
-        <%= render partial: 'payments/payment_card', locals: { payment: } %>
+        <%= render partial: 'payments/payment_card', locals: { payment:, category: @category } %>
       <% end %>
     <% end %>
   </div>
