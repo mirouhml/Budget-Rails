@@ -14,4 +14,12 @@ class Category < ApplicationRecord
       "#{payments.count} transactions"
     end
   end
+
+  def total_transactions
+    total = 0
+    payments.each do |payment|
+      total += payment.amount
+    end
+    "$#{total}"
+  end
 end
