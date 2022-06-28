@@ -6,7 +6,6 @@ Budget Rails is a budgeting app, it will allow you to create a budget, and track
 
 <div>
   <img src="https://user-images.githubusercontent.com/20567503/176318560-e9cae0c9-9919-420b-926b-e8367b021c2a.png" width="200">
-  <img src="https://user-images.githubusercontent.com/20567503/176318719-3eee0d7f-cad4-4b36-bafe-8c4946913719.png" width="200">
   <img src="https://user-images.githubusercontent.com/20567503/176319290-62444c00-b3cb-4df0-b0d9-9633ee22f11c.png" width="200">
   <img src="https://user-images.githubusercontent.com/20567503/176319315-277533e8-e800-4aa1-8cea-b50105f6f84c.png" width="200">
   <img src="https://user-images.githubusercontent.com/20567503/176319379-9ec89761-e94e-40fc-8335-8bb7e21b37cf.png" width="200">
