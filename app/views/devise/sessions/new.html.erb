@@ -25,8 +25,9 @@
               </div>
             <% end %>
           </div>
-          <div class="text-sm">
+          <div class="text-sm flex flex-col text-right m-2">
             <%= link_to "Forgot your password?", new_password_path(resource_name), class: "font-medium text-main-600 hover:text-indigo-500 cursor-pointer" %>
+            <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name), class: "font-medium text-main-600 hover:text-indigo-500 cursor-pointer" %>
           </div>
         </div>
         <%= f.submit "Log in", class: "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-main-600 hover:bg-main-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-6 cursor-pointer" %>
