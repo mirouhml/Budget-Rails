@@ -5,7 +5,10 @@ class CategoriesController < ApplicationController
     @categories = current_user.categories.includes(:author)
   end
 
-  def show; end
+  def show
+    @category = Category.find(params[:id])
+    @payments = @category.payments.includes(:author).order('created_at DESC')
+  end
 
   def new
     @category = Category.new
