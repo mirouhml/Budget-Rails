@@ -8,10 +8,14 @@ module.exports = {
     './app/views/**/*.{erb,haml,html,slim}',
   ],
   theme: {
+    fontFamily: {
+      proxima: ['Proxima Nova', ...defaultTheme.fontFamily.sans],
+    },
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         pacifico: ['Pacifico', ...defaultTheme.fontFamily.sans],
+        proxima: ['Proxima Nova', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         main: {
