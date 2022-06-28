@@ -10,3 +10,12 @@ body {
   flex-direction: column;
   height: 100%;
 }
+
+#flash {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#flash.fade {
+  opacity: 0;
+}
