@@ -78,3 +78,5 @@ gem 'tailwindcss-rails', '~> 2.0'
 gem 'devise'
 
 gem 'cancancan', '~> 3.4'
+
+gem 'webpacker', '~> 5.4'

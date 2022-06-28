@@ -1,4 +1,11 @@
-<div>
-  <h1 class="font-bold text-4xl">Categories#new</h1>
-  <p>Find me in app/views/categories/new.html.erb</p>
-</div>
+<section class="h-full flex flex-col">
+  <%= render "shared/nav_bar", locals: {middle: 'ADD CATEGORY', left: 'back', path: categories_path} %>
+  <%= render "shared/flash" %>
+  <%= form_with model: @category, url: categories_path, method: :post, class: "bg-grey-lighter h-full justify-center flex flex-col" do |form| %>
+    <div class="bg-white px-6 py-8 text-black w-full">
+      <%= form.text_field :name, required: true, class: 'block border border-grey-light w-full p-3 rounded mb-4', placeholder: 'Category name' %>
+      <%= form.text_field :icon, required: true, class: 'block border border-grey-light w-full p-3 rounded mb-4', placeholder: 'Icon' %>
+      <%= form.submit 'Save', data: {disable_with: "Loading..."}, class: 'block border bg-second text-white border-grey-light w-full p-3 rounded mb-4' %> 
+    </div>
+  <% end %>
+</section>

@@ -2,8 +2,13 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :payments, only: [:index, :show, :new, :create, :destroy]
-  resources :categories, only: [:index, :show, :new, :create, :destroy]
+  devise_scope :user do
+    get '/sign-in' => "devise/sessions#new", :as => :login
+  end
 
-  root "users#index"
+  resources :users, only: [:index]
+  resources :categories, only: [:index, :show, :new, :create]
+  resources :payments, only: [:new, :create]
+
+  root "categories#index"
 end
