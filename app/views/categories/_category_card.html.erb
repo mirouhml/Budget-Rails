@@ -1,0 +1,17 @@
+<%= link_to category_path(category) do %>
+  <div class="grid grid-cols-[1fr_3fr] m-3 bg-white rounded-lg border border-gray-200 shadow-md 
+  hover:bg-gray-100">
+    <div class="flex justify-center items-center">
+      <img 
+        class="object-cover w-full h-full p-1 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg max-w-3xl" 
+        src= <%= category.icon %> 
+        alt="Category Icon"
+      >
+    </div>
+    <div class="p-4">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900"><%= category.name %></h5>
+      <h5 class="mb-2 text-lg font-bold tracking-tight text-text-2"><%= category.number_of_transactions %></h5>
+      <p class="font-normal text-gray-700 dark:text-gray-400"><%= category.author.name %></p>
+    </div>
+  </div>
+<% end %>

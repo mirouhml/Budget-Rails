@@ -1,0 +1,11 @@
+<% flash.each do |key, value| %>
+  <div id="flash" class="alert alert-<%= key %> pt-20">
+    <% if !value.blank? %>
+      <div class="flash flex w-full justify-center my-2">
+        <div class="p-2 bg-indigo-500 items-center text-indigo-100 leading-none rounded-full inline-flex" role="alert">
+            <span class="font-semibold mx-3 text-left flex-auto text-white"><%= value %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

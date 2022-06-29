@@ -1,0 +1,21 @@
+<section class="h-full flex flex-col">
+  <%= render "shared/nav_bar", locals: {middle: 'ADD TRANSACTION', left: 'back', path: category_path(@category)} %>
+  <%= render "shared/flash" %>
+  <%= form_with model: @payment, url: payments_path, method: :post, class: "bg-grey-lighter h-full justify-center flex flex-col" do |form| %>
+    <div class="bg-white px-6 py-8 text-black w-full">
+      <%= form.hidden_field :category_id, value: @category.id %>
+      <%= form.text_field :name, class: 'block border border-grey-light w-full p-3 rounded mb-4', placeholder: 'Transaction name', required: true %>
+      <%= form.number_field :amount, min: 1.0, step: 0.5, class: 'block border border-grey-light w-full p-3 rounded mb-4', placeholder: 'Amount', required: true %>
+      <div class="flex flex-col gap-2 m-2">
+        <%= form.label :categories, 'Choose one or multiple categories:' %>
+        <%= form.collection_check_boxes :category_ids, @categories, :id, :name do |item| %>
+          <div class="flex gap-2 items-center">
+            <%= item.check_box(checked: item.value == @category.id, class: "h-4 w-4 text-main-600 focus:ring-main-500 border-gray-300 rounded cursor-pointer") %>
+            <%= item.label %>
+          </div>
+        <% end %>
+      </div>
+      <%= form.submit 'Save', data: {disable_with: "Loading..."}, class: 'cursor-pointer block border bg-second text-white border-grey-light w-full p-3 rounded mb-4' %> 
+    </div>
+  <% end %>
+</section>
