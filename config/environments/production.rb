@@ -93,10 +93,10 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'mirouhml-budget-rails.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    port: 587,
-    address: 'smtp.gmail.com',
-    user_name: 'budget.rails@gmail.com',
-    password: "jslounlcmkxrsdkk",
+    port: ENV['SMTP_PORT'],
+    address: ENV['SMTP_HOST'],
+    user_name: ENV['GMAIL_USERNAME'],
+    password: ENV['GMAIL_PASSWORD'],
     authentication: :plain,
     enable_starttls_auto: true
   }

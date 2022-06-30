@@ -57,6 +57,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'rswag'
+  gem 'figaro'
 end
 
 group :development do
