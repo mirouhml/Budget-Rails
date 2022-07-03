@@ -53,11 +53,11 @@ group :development, :test do
   gem 'bullet'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'ffi'
+  gem 'figaro'
   gem 'letter_opener', '~> 1.4', '>= 1.4.1'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'rswag'
-  gem 'figaro'
 end
 
 group :development do
